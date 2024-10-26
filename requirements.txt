@@ -1,0 +1,4 @@
+langchain-core~=0.3.13
+langchain-community~=0.3.3
+tqdm~=4.66.5
+openai~=1.52.2
