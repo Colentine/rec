@@ -52,8 +52,8 @@ def main():
         for idx, prompt in tqdm(enumerate(prompt_list['prompts'][0:100])):
 
             #print(chain.invoke({"query": prompt}))
-            res = chain.invoke({"query": prompt})
             try:
+                res = chain.invoke({"query": prompt})
                 res = extract_result(res)
                 pos = res.index(str(labels[idx] + 1))
             except Exception as e:
