@@ -49,7 +49,7 @@ def main():
         top_1 = 0
         out_put_error = 0
         acc_pos = 0
-        for idx, prompt in tqdm(enumerate(prompt_list['prompts'][0:100])):
+        for idx, prompt in tqdm(enumerate(prompt_list['prompts'][0:20])):
 
             #print(chain.invoke({"query": prompt}))
             try:
@@ -72,11 +72,11 @@ def main():
 
     list_result = \
         {
-            'hit5': top_5 / 100,
-            'hit3': top_3 / 100,
-            'hit1': top_1 / 100,
-            'error_rate': out_put_error / 100,
-            'avg_pos': acc_pos / 100
+            'hit5': top_5 / 20,
+            'hit3': top_3 / 20,
+            'hit1': top_1 / 20,
+            'error_rate': out_put_error / 20,
+            'avg_pos': acc_pos / 20
         }
 
     with open("result.json", "r", encoding="utf-8") as f:
